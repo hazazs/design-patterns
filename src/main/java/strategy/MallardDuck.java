@@ -1,5 +1,8 @@
 package strategy;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 class MallardDuck extends Duck {
 
     MallardDuck(FlyBehavior flyBehavior, QuackBehavior quackBehavior) {
@@ -9,7 +12,7 @@ class MallardDuck extends Duck {
 
     @Override
     void display() {
-        System.out.println("I'm a real Mallard duck");
+        log.info("I'm a real Mallard duck");
     }
 
 }

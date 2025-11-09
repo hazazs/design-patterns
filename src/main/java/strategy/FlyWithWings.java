@@ -1,10 +1,13 @@
 package strategy;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 class FlyWithWings implements FlyBehavior {
 
     @Override
     public void fly() {
-        System.out.println("I'm flying!!");
+        log.info("I'm flying!!");
     }
 
 }

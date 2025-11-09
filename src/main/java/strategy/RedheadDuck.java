@@ -1,10 +1,18 @@
 package strategy;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 class RedheadDuck extends Duck {
+
+    RedheadDuck(FlyBehavior flyBehavior, QuackBehavior quackBehavior) {
+        this.flyBehavior = flyBehavior;
+        this.quackBehavior = quackBehavior;
+    }
 
     @Override
     void display() {
-        System.out.println("I'm a real Redhead duck");
+        log.info("I'm a real Red Headed duck");
     }
 
 }

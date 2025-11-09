@@ -1,10 +1,18 @@
 package strategy;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 class DecoyDuck extends Duck {
+
+    DecoyDuck(FlyBehavior flyBehavior, QuackBehavior quackBehavior) {
+        this.flyBehavior = flyBehavior;
+        this.quackBehavior = quackBehavior;
+    }
 
     @Override
     void display() {
-        System.out.println("I'm a fake duck");
+        log.info("I'm a duck Decoy");
     }
 
 }

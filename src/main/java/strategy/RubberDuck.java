@@ -1,10 +1,18 @@
 package strategy;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 class RubberDuck extends Duck {
+
+    RubberDuck(FlyBehavior flyBehavior, QuackBehavior quackBehavior) {
+        this.flyBehavior = flyBehavior;
+        this.quackBehavior = quackBehavior;
+    }
 
     @Override
     void display() {
-        System.out.println("I'm just a yellow toy duck");
+        log.info("I'm a rubber duckie");
     }
 
 }
