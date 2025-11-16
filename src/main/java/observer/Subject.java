@@ -1,5 +1,6 @@
 package observer;
 
+@SuppressWarnings("unused")
 interface Subject {
 
     void registerObserver(Observer observer);

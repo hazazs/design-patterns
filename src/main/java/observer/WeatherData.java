@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Getter
+@SuppressWarnings("unused")
 class WeatherData implements Subject {
 
     private final List<Observer> observers = new ArrayList<>();
@@ -30,7 +31,7 @@ class WeatherData implements Subject {
         }
     }
 
-    void measurementsChanged() {
+    private void measurementsChanged() {
         notifyObservers();
     }
 

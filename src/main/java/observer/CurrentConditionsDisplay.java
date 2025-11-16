@@ -3,6 +3,7 @@ package observer;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
+@SuppressWarnings("unused")
 class CurrentConditionsDisplay implements Observer, DisplayElement {
 
     private float temperature;
