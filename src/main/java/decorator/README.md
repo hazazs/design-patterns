@@ -9,7 +9,7 @@ abstract class (```CondimentDecorator```).
 ## The Component
 
 All the concrete components must implement the following method from ```Beverage```:
-- cost()
+- ```cost()```
 
 ## The Decorators
 

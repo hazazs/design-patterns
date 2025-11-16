@@ -9,16 +9,16 @@ There can be optionally other interfaces, like ```DisplayElement``` in our case.
 ## The Subject
 
 The concrete subject (```WeatherData```) implements the following methods from the ```Subject``` interface:
-- registerObserver(Observer)
-- removeObserver(Observer)
-- notifyObservers()
+- ```registerObserver(Observer)```
+- ```removeObserver(Observer)```
+- ```notifyObservers()```
 
 It also has a ```private List<Observer> observers``` list, and in the ```notifyObservers()``` method it calls the ```update()```
 method on each element in the list after any change in its state (i.e. ```measurementsChanged()```).
 
 ## The Observers
 All the observers implement the following method from the ```Observer``` interface:
-- update()
+- ```update()```
 
 During the instantiation they can register themselves on the ```WeatherData``` constructor parameter by calling ```registerObserver(this)```.
 
