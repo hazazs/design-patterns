@@ -3,6 +3,7 @@ package strategy;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
+@SuppressWarnings("unused")
 class MallardDuck extends Duck {
 
     MallardDuck(FlyBehavior flyBehavior, QuackBehavior quackBehavior) {
