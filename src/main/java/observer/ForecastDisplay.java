@@ -8,15 +8,17 @@ class ForecastDisplay implements Observer, DisplayElement {
 
     private float currentPressure = 29.92F;
     private float lastPressure;
+    private final WeatherData weatherData;
 
     ForecastDisplay(WeatherData weatherData) {
+        this.weatherData = weatherData;
         weatherData.registerObserver(this);
     }
 
     @Override
-    public void update(float temperature, float humidity, float pressure) {
+    public void update() {
         lastPressure = currentPressure;
-        currentPressure = pressure;
+        currentPressure = weatherData.getPressure();
 
         display();
     }

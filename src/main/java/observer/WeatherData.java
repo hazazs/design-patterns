@@ -1,17 +1,20 @@
 package observer;
 
+import lombok.AccessLevel;
 import lombok.Getter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Getter
 @SuppressWarnings("unused")
 class WeatherData implements Subject {
 
     private final List<Observer> observers = new ArrayList<>();
+    @Getter(AccessLevel.PACKAGE)
     private float temperature;
+    @Getter(AccessLevel.PACKAGE)
     private float humidity;
+    @Getter(AccessLevel.PACKAGE)
     private float pressure;
 
     @Override
@@ -27,7 +30,7 @@ class WeatherData implements Subject {
     @Override
     public void notifyObservers() {
         for (Observer observer : observers) {
-            observer.update(temperature, humidity, pressure);
+            observer.update();
         }
     }
 

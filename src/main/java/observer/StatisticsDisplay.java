@@ -10,13 +10,17 @@ class StatisticsDisplay implements Observer, DisplayElement {
     private float minTemperature = Float.MAX_VALUE;
     private float sum = 0.0F;
     private int count;
+    private final WeatherData weatherData;
 
     StatisticsDisplay(WeatherData weatherData) {
+        this.weatherData = weatherData;
         weatherData.registerObserver(this);
     }
 
     @Override
-    public void update(float temperature, float humidity, float pressure) {
+    public void update() {
+        float temperature = weatherData.getTemperature();
+
         sum += temperature;
         count++;
 
