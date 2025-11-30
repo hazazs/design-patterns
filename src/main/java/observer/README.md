@@ -25,9 +25,9 @@ During the instantiation they can register themselves on the ```WeatherData``` c
 ---
 With the Observer pattern the subject and the observers don't know the implementation of each other (*1*), and any number
 of observers can be (un)registered in runtime.
-This is the pull-based alternative of the Observer pattern, where all the individual displays (concrete observers) will pull
-only the necessary measurements from the concrete subject through its getters. In the push-based alternative the ```update()```
+This is the pull-based alternative of the Observer pattern, where all the individual displays (concrete observers) pull only
+the necessary measurements from the concrete subject through its getters. In the push-based alternative the ```update()```
 method looks like this:
 ```update(float, float, float)```
-Which means the concrete subject will push all the measurements to the concrete observers, even if they don't need them at
-all. With this alternative we can cause redundancy.
+Which means the concrete subject pushes all the measurements to the concrete observers, even if they don't need them at all.
+With this alternative we can cause redundancy.
