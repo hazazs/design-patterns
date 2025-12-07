@@ -1,0 +1,5 @@
+package factory;
+
+interface Dough {
+
+}
